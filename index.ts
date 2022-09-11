@@ -18,9 +18,30 @@ app.post("/users",(req,res)=>{
     })
 })
 
-app.get("users/:userId/products", (req, res)=>{
+app.get("/users/:userId/products", (req, res)=>{
     res.json({
         products: []
+    })
+})
+
+app.get("/users/:userId/config", (req, res)=>{
+    res.json({
+        fullname: "",
+        username: "",
+        email: "",
+    })
+})
+
+app.get("/users/:userId/watchlist",(req,res)=>{
+    res.json({
+        watchlist: []
+    })
+})
+
+app.post("/reviews",(req,res)=>{
+    res.status(201).json({
+        message:"ok",
+        id: 123456789,
     })
 })
 
